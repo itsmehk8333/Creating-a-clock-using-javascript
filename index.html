@@ -1,0 +1,69 @@
+<!-- Write a JavaScript program to display the current day and time in the following format.  -->
+<html>
+    <style>
+        body{
+            background-color: rgb(225,236,254);
+        }
+        p{
+            margin-top: 200px;
+            padding: 50px 50px;
+            text-align: center;
+            font-size: 60px;
+            border: 1px solid rgb(190,192,204);
+            margin-left: 400px;
+            margin-right: 400px;
+            border-radius: 10px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            background-color: rgb(199,153,129);
+            color: rgb(236,236,236);
+
+
+        }
+    </style>
+    <body> 
+        <p id="id1">
+                 
+        </p>
+        
+        <script>
+            
+            setInterval(myfunction,1000);
+
+            function myfunction(){
+                var date= new Date();
+             var H=date.getHours();
+             var M=date.getMinutes();
+             var S=date.getSeconds();
+              if(H>12){
+                  H=H-12;
+
+                  var en="AM";
+                  if(H=>12){
+                      en="PM";
+                  }
+
+                  
+              
+          }
+            if(H==0){
+          H=12; 
+            }
+            if(H<10){
+               H="0"+H;
+            }  
+            if(M<10){
+                M="0"+M;
+            }
+            if(S<10){
+                S="0"+S;    
+            }
+          document.getElementById("id1").textContent=H+"  "+ "-"+" "+M+" "+"-" +" "+S+" "+en;
+         
+
+
+            }
+            myfunction();
+        </script>
+    </body>
+</html>
